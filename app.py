@@ -5,7 +5,7 @@ app = Flask(__name__, template_folder='template')
 
 @app.route('/', methods=["GET"])
 def home():
-    return '<html><body><form action = "/uploader" method = "POST" enctype = "multipart/form-data"><input type = "file" name = "file"/><input type = "submit" value = "Submit"/></form></body></html>'
+    return render_template('index.html')
 
 
 @app.route('/uploader', methods=['GET', 'POST'])

@@ -1,27 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <title>Login</title>
-    <link rel="stylesheet" href="style.css" type="text/css">
+    <title>Document Verification</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}" type="text/css">
 </head>
+
 <body>
     <div class="loginbox">
-        <img src="profile.jpg" alt="profile" class="avatar">
+        <img src="{{url_for('static',filename='profile.jpg')}}" alt="profile" class="avatar">
         <h1>Login Form</h1>
-        <form>
+        <form action="/uploader" method="POST" enctype="multipart/form-data">
             <p>Fullname</p>
             <input type="text" name="" placeholder="Full Name">
             <p>Address</p>
             <input type="textarea" name="" placeholder="Address">
-            <p>Username</p>
+            <p>Gender</p>
             <input type="text" name="" placeholder="Username">
             <p>Password</p>
             <input type="text" name="" placeholder="Password">
-            <input type="submit" value="Login">
-            <a href="#">Forgot Password?</a><br>
-            <a href="#">Sign Up</a>
+            <p>Document Upload</p>
+            <input type="file" name="file">
+            <input type="submit" value="Verify">
         </form>
     </div>
-    
+
 </body>
+
 </html>
