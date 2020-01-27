@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request
+from qrScanner import scanQR
 
 app = Flask(__name__, template_folder='template')
 
@@ -13,7 +14,7 @@ def upload_file():
     if request.method == 'POST':
         f = request.files['file']
         f.save('uploads/upload.png')
-        return '<h1>File Uploaded Successfully!!!</h1>'
+        return str(scanQR('upload.png')[0].data)
 
 
 if __name__ == '__main__':
