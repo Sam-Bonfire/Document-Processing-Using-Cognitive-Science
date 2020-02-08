@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document Verification</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}" type="text/css">
+</head>
+
+<body>
+    <div class="loginbox">
+        <img src="{{url_for('static',filename='profile.jpg')}}" alt="profile" class="avatar">
+        <h1>Extracted Data</h1>
+        {% if UID %}
+            <p>UID: </p>
+            <p>{{UID}}</p>
+        {% endif %}
+
+        {% if Name %}
+            <p>Name: </p>
+            <p>{{Name}}</p>
+        {% endif %}
+
+        {% if Gender %}
+            <p>Gender: </p>
+            <p>{{Gender}}</p>
+        {% endif %}
+
+        {% if Date_of_Birth %}
+            <p>Date of Birth: </p>
+            <p>{{Date_of_Birth}}</p>
+        {% endif %}
+
+        {% if CO %}
+            <p>CO: </p>
+            <p>{{CO}}</p>
+        {% endif %}
+
+        {% if Loc %}
+            <p>Loc: </p>
+            <p>{{Loc}}</p>
+        {% endif %}
+
+        {% if VTC %}
+            <p>VTC: </p>
+            <p>{{VTC}}</p>
+        {% endif %}
+
+        {% if Po %}
+            <p>Po: </p>
+            <p>{{Po}}</p>
+        {% endif %}
+
+        {% if District %}
+            <p>District: </p>
+            <p>{{District}}</p>
+        {% endif %}
+
+        {% if SubDistrict %}
+            <p>Sub District: </p>
+            <p>{{SubDistrict}}</p>
+        {% endif %}
+
+        {% if State %}
+            <p>State: </p>
+            <p>{{State}}</p>
+        {% endif %}
+
+        {% if Pincode %}
+            <p>Pincode: </p>
+            <p>{{Pincode}}</p>
+        {% endif %}
+
+        {% if Year_of_Birth %}
+            <p>Year of Birth: </p>
+            <p>{{Year_of_Birth}}</p>
+        {% endif %}
+
+    </div>
+
+</body>
+
+</html>
+
+<!-- @uid : 231581873024
+
+@name : Mukul Rajendra Kadaskar
+
+@gender : M
+
+@yob : 1998
+
+@co : S/O Rajendra Kadaskar
+
+@loc : chikhli no.2
+
+@vtc : Chikhli No.2
+
+@po : Chikhali
+
+@dist : Chandrapur
+
+@subdist : Mul
+
+@state : Maharashtra
+
+@pc : 441212
+
+@dob : 13/05/1998 -->

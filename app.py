@@ -13,13 +13,26 @@ def home():
 def upload_file():
     if request.method == 'POST':
         f = request.files['file']
+        #Getting Data from form: -  print(request.form["text"])
         f.save('uploads/upload.png')
         dataDict = scanQR('upload.png')
-        renderData = ''
-        for key in dataDict['PrintLetterBarcodeData']:
-            renderData+='<p>'+str(key)+' : '+str(dataDict['PrintLetterBarcodeData'][key])+'</p>'
-        return renderData
+
+        return render_template('response.html', 
+            UID=dataDict['PrintLetterBarcodeData']['@uid'], 
+            Name=dataDict['PrintLetterBarcodeData']['@name'], 
+            Gender=dataDict['PrintLetterBarcodeData']['@gender'], 
+            Date_of_Birth=dataDict['PrintLetterBarcodeData']['@dob'], 
+            CO=dataDict['PrintLetterBarcodeData']['@co'],
+            Loc=dataDict['PrintLetterBarcodeData']['@loc'],
+            VTC=dataDict['PrintLetterBarcodeData']['@vtc'],
+            Po=dataDict['PrintLetterBarcodeData']['@po'],
+            District=dataDict['PrintLetterBarcodeData']['@dist'],
+            SubDistrict=dataDict['PrintLetterBarcodeData']['@subdist'],
+            State=dataDict['PrintLetterBarcodeData']['@state'],
+            Pincode=dataDict['PrintLetterBarcodeData']['@pc'],
+            Year_of_Birth=dataDict['PrintLetterBarcodeData']['@yob'])
 
 
 if __name__ == '__main__':
-    app.run(debug = True)
+    app.run(debug=True)
+    redirect('/')
