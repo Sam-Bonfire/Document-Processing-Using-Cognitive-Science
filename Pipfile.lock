@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "5f95f9b4d83b59d02afefdff744ae993ecdf5075eadd1e398a9eb19775ee9ad1"
+            "sha256": "55b1210262ed4f0124ebd73537c595339e9c03247497ce3aac05b484c0cd1365"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -40,10 +40,10 @@
         },
         "jinja2": {
             "hashes": [
-                "sha256:74320bb91f31270f9551d46522e33af46a80c3d619f4a4bf42b3164d30b5911f",
-                "sha256:9fe95f19286cfefaa917656583d020be14e7859c6b0252588391e47db34527de"
+                "sha256:93187ffbc7808079673ef52771baa950426fd664d3aad1d0fa3e95644360e250",
+                "sha256:b0eaf100007721b5c16c1fc1eecb87409464edc10469ddc9a22a27a99123be49"
             ],
-            "version": "==2.10.3"
+            "version": "==2.11.1"
         },
         "markupsafe": {
             "hashes": [
@@ -111,6 +111,13 @@
             "index": "pypi",
             "version": "==7.0.0"
         },
+        "pytesseract": {
+            "hashes": [
+                "sha256:a8c3b74977e8fba6387f483f91f35e59e2ae7f34dfeff2028dc83adcd2afd0ac"
+            ],
+            "index": "pypi",
+            "version": "==0.3.2"
+        },
         "pyzbar": {
             "hashes": [
                 "sha256:0e204b904e093e5e75aa85e0203bb0e02888105732a509b51f31cff400f34265",
@@ -122,10 +129,10 @@
         },
         "werkzeug": {
             "hashes": [
-                "sha256:1e0dedc2acb1f46827daa2e399c1485c8fa17c0d8e70b6b875b4e7f54bf408d2",
-                "sha256:b353856d37dec59d6511359f97f6a4b2468442e454bd1c98298ddce53cac1f04"
+                "sha256:169ba8a33788476292d04186ab33b01d6add475033dfc07215e6d219cc077096",
+                "sha256:6dc65cf9091cf750012f56f2cad759fa9e879f511b5ff8685e456b4e3bf90d16"
             ],
-            "version": "==0.16.1"
+            "version": "==1.0.0"
         },
         "xmltodict": {
             "hashes": [
