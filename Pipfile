@@ -12,6 +12,7 @@ pillow = "*"
 pyzbar = "*"
 xmltodict = "*"
 pytesseract = "*"
+opencv-python = "*"
 
 [requires]
 python_version = "3.8"

@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request
 from qrScanner import scanQR
+from tesseractOCR import scanForText
 
 app = Flask(__name__, template_folder='template')
 
@@ -30,9 +31,9 @@ def upload_file():
             SubDistrict=dataDict['PrintLetterBarcodeData']['@subdist'],
             State=dataDict['PrintLetterBarcodeData']['@state'],
             Pincode=dataDict['PrintLetterBarcodeData']['@pc'],
-            Year_of_Birth=dataDict['PrintLetterBarcodeData']['@yob'])
+            Year_of_Birth=dataDict['PrintLetterBarcodeData']['@yob'],
+            OCR=scanForText(image="uploads/sample.png",preprocess="blur"))
 
 
 if __name__ == '__main__':
     app.run(debug=True)
-    redirect('/')
