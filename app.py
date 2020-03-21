@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request
 from qrScanner import scanQR
 from tesseractOCR import scanForText
+from face_extractor import extract_face
 
 app = Flask(__name__, template_folder='template')
 
@@ -18,7 +19,9 @@ def upload_file():
         f.save('uploads/upload.png')
         dataDict = scanQR('upload.png')
 
+        extract_face('prathamesh.jpg')
         return render_template('response.html', 
+            Image = 'prathamesh.jpg',
             UID=dataDict['PrintLetterBarcodeData']['@uid'], 
             Name=dataDict['PrintLetterBarcodeData']['@name'], 
             Gender=dataDict['PrintLetterBarcodeData']['@gender'], 

@@ -25,7 +25,7 @@ def extract_face(img):
 		
 		if confidence > 0.5:
 			frame = image[startY:endY, startX:endX]
-			cv2.imwrite(base_dir+'/uploads/faces/prathamesh.jpg', frame)
+			cv2.imwrite(base_dir+'/static/prathamesh.jpg', frame)
 			# cv2.imshow("frame",frame)
 			# cv2.waitKey(0)
 			# cv2.destroyAllWindows()

@@ -12,9 +12,9 @@
         <h1>Extracted Data</h1>
         {% if Image %}
             <p>User Image: </p>
-            <img src="{{Image}}" alt="profile image">
+            <img src="{{url_for('static',filename='faces/')}}{{Image}}" alt="profile image" width="100px" height="100px">
         {% endif %}
-        
+
         {% if UID %}
             <p>UID: </p>
             <p>{{UID}}</p>
