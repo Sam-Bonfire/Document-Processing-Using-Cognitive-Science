@@ -10,6 +10,11 @@
     <div class="loginbox">
         <img src="{{url_for('static',filename='profile.jpg')}}" alt="profile" class="avatar">
         <h1>Extracted Data</h1>
+        {% if Image %}
+            <p>User Image: </p>
+            <img src="{{Image}}" alt="profile image">
+        {% endif %}
+        
         {% if UID %}
             <p>UID: </p>
             <p>{{UID}}</p>
