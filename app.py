@@ -35,7 +35,7 @@ def upload_file():
             State=dataDict['PrintLetterBarcodeData']['@state'],
             Pincode=dataDict['PrintLetterBarcodeData']['@pc'],
             Year_of_Birth=dataDict['PrintLetterBarcodeData']['@yob'],
-            OCR=scanForText(image="uploads/sample.png",preprocess="blur"))
+            OCR=scanForText(image="uploads/upload.png",preprocess="blur"))
 
 
 if __name__ == '__main__':
