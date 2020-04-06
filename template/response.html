@@ -2,117 +2,121 @@
 <html lang="en">
 
 <head>
-    <title>Document Verification</title>
-    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}" type="text/css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document Verification</title>
+	<link rel="stylesheet" href="{{url_for('static',filename='response.css')}}" type="text/css">
 </head>
 
 <body>
-    <div class="loginbox">
-        <img src="{{url_for('static',filename='profile.jpg')}}" alt="profile" class="avatar">
-        <h1>Extracted Data</h1>
-        {% if Image %}
-            <p>User Image: </p>
-            <img src="{{url_for('static',filename='faces/')}}{{Image}}" alt="profile image" width="100px" height="100px">
-        {% endif %}
+	{% if Image %}
+	<img class="profile" src="{{url_for('static',filename='faces/')}}{{Image}}" alt="Profile Image">
+	{% else %}
+	<img class="profile" src="{{url_for('static',filename='profile.jpg')}}" alt="Profile Image">
+	{% endif %}
 
-        {% if UID %}
-            <p>UID: </p>
-            <p>{{UID}}</p>
-        {% endif %}
+	<div class="grid-container">
+		{% if UID %}
+		<div class="grid-item">
+			<h3>UID</h3>
+			<p>{{UID}}</p>
+		</div>
+		{% endif %}
 
-        {% if Name %}
-            <p>Name: </p>
-            <p>{{Name}}</p>
-        {% endif %}
+		{% if Name %}
+		<div class="grid-item">
+			<h3>Name</h3>
+			<p>{{Name}}</p>
+		</div>
+		{% endif %}
 
-        {% if Gender %}
-            <p>Gender: </p>
-            <p>{{Gender}}</p>
-        {% endif %}
+		{% if Gender %}
+		<div class="grid-item">
+			<h3>Gender</h3>
+			<p>{{Gender}}</p>
+		</div>
+		{% endif %}
 
-        {% if Date_of_Birth %}
-            <p>Date of Birth: </p>
-            <p>{{Date_of_Birth}}</p>
-        {% endif %}
+		{% if Date_of_Birth %}
+		<div class="grid-item">
+			<h3>Date of Birth</h3>
+			<p>{{Date_of_Birth}}</p>
+		</div>
+		{% endif %}
 
-        {% if CO %}
-            <p>CO: </p>
-            <p>{{CO}}</p>
-        {% endif %}
+		{% if CO %}
+		<div class="grid-item">
+			<h3>CO</h3>
+			<p>{{CO}}</p>
+		</div>
+		{% endif %}
 
-        {% if Loc %}
-            <p>Loc: </p>
-            <p>{{Loc}}</p>
-        {% endif %}
+		{% if Loc %}
+		<div class="grid-item">
+			<h3>Locality</h3>
+			<p>{{Loc}}</p>
+		</div>
+		{% endif %}
 
-        {% if VTC %}
-            <p>VTC: </p>
-            <p>{{VTC}}</p>
-        {% endif %}
+		{% if VTC %}
+		<div class="grid-item">
+			<h3>VTC</h3>
+			<p>{{VTC}}</p>
+		</div>
+		{% endif %}
 
-        {% if Po %}
-            <p>Po: </p>
-            <p>{{Po}}</p>
-        {% endif %}
+		{% if Po %}
+		<div class="grid-item">
+			<h3>Post Office</h3>
+			<p>{{Po}}</p>
+		</div>
+		{% endif %}
 
-        {% if District %}
-            <p>District: </p>
-            <p>{{District}}</p>
-        {% endif %}
+		{% if District %}
+		<div class="grid-item">
+			<h3>District</h3>
+			<p>{{District}}</p>
+		</div>
+		{% endif %}
 
-        {% if SubDistrict %}
-            <p>Sub District: </p>
-            <p>{{SubDistrict}}</p>
-        {% endif %}
+		{% if SubDistrict %}
+		<div class="grid-item">
+			<h3>Sub District</h3>
+			<p>{{SubDistrict}}</p>
+		</div>
+		{% endif %}
 
-        {% if State %}
-            <p>State: </p>
-            <p>{{State}}</p>
-        {% endif %}
+		{% if State %}
+		<div class="grid-item">
+			<h3>State</h3>
+			<p>{{State}}</p>
+		</div>
+		{% endif %}
 
-        {% if Pincode %}
-            <p>Pincode: </p>
-            <p>{{Pincode}}</p>
-        {% endif %}
+		{% if Pincode %}
+		<div class="grid-item">
+			<h3>Pincode</h3>
+			<p>{{Pincode}}</p>
+		</div>
+		{% endif %}
 
-        {% if Year_of_Birth %}
-            <p>Year of Birth: </p>
-            <p>{{Year_of_Birth}}</p>
-        {% endif %}
+		{% if Year_of_Birth %}
+		<div class="grid-item">
+			<h3>Year of Birth</h3>
+			<p>{{Year_of_Birth}}</p>
+		</div>
+		{% endif %}
 
-        {% if OCR %}
-            <p>OCR: </p>
-            <p>{{OCR}}</p>
-        {% endif %}
+		{% if OCR %}
+		<div class="grid-item ocr">
+			<h3>OCR Text</h3>
+			<p>{{OCR}}</p>
+		</div>
+		{% endif %}
 
-    </div>
+	</div>
 
 </body>
 
 </html>
-
-<!-- @uid : 231581873024
-
-@name : Mukul Rajendra Kadaskar
-
-@gender : M
-
-@yob : 1998
-
-@co : S/O Rajendra Kadaskar
-
-@loc : chikhli no.2
-
-@vtc : Chikhli No.2
-
-@po : Chikhali
-
-@dist : Chandrapur
-
-@subdist : Mul
-
-@state : Maharashtra
-
-@pc : 441212
-
-@dob : 13/05/1998 -->
