@@ -13,6 +13,7 @@ pyzbar = "*"
 xmltodict = "*"
 pytesseract = "*"
 opencv-python = "*"
+sqlite3 = "*"
 
 [requires]
 python_version = "3.8"

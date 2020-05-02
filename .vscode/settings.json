@@ -1,3 +1,4 @@
 {
-    "python.pythonPath": "/home/sam/.local/share/virtualenvs/Final_Year_Project-XOrqORCS/bin/python"
+    "python.pythonPath": "/home/sam/.local/share/virtualenvs/Final_Year_Project-XOrqORCS/bin/python",
+    "sqltools.connections": []
 }

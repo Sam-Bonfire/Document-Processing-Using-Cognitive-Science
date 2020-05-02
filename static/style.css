@@ -1,85 +1,113 @@
 body{
-    margin: 0;
-    padding: 0;
-    background: url(background.jpg);
-    background-size: cover;
-    background-position: fill;
-    font-family: sans-serif;
+    background-image: url('background.jpg');
+    background-repeat: no-repeat;
+	background-size: cover;
+	background-position: fill;
+	height: 100%;
 }
 
-.loginbox{
-    width: 320px;
-    height: 640px;
-    background: #000000;
-    color: #ffffff;
-    top: 50%;
-    left: 50%;
+.profile{
     position: absolute;
-    transform: translate(-50%,-50%);
-    box-sizing: border-box;
-    padding: 70px 30px;
-}
-
-.avatar{
     width: 100px;
     height: 100px;
+    left: calc(50% - 100px/2);
+    top: calc(50% - 152px/2 - 230px);
     border-radius: 50%;
-    position: absolute;
-    top: -50px;
-    left: calc(50% - 50px);
+}
+
+.grid-container{
+	display: grid;
+	grid-template-columns: repeat(3,1fr);
+	align-content: space-evenly;
+	grid-template-rows: repeat(5,1fr);
+	background: rgba(17, 17, 17, 0.53);
+	border-radius: 49px;
+	margin: 5%;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 50px;
+	padding-bottom: 10px;
+}
+
+.grid-item{
+    margin: 5px;
+    background: rgba(124, 74, 71, 0.46);
+	border-radius: 11px;
+}
+
+h3{
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 22px;
+	margin-top: 10px;
+	margin-left: 10px;
+	color: #FFFFFF;
 }
 
 h1{
-    margin: 0;
-    padding: 0 0 20px;
-    text-align: center;
-    font-size: 22px;
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 32px;
+	line-height: 32px;	
+	color: #FFFFFF;
 }
 
-.loginbox p{
-    margin: 0;
-    padding: 0;
-    font-weight: bold;
+p{
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 18px;
+	line-height: 22px;
+	margin-top: -10px;
+	margin-left: 10px;
+	margin-right: 10px;
+	color: #FFFFFF;
 }
 
-.loginbox input{
-    width: 100%;
-    margin-bottom: 20px;
+.wide {
+	grid-column-start: 1;
+	grid-column-end: 4;
 }
 
-.loginbox input[type="text"], input[type="password"],input[type="textarea"]{
-    border: none;
-    border-bottom: 1px solid #ffffff;
-    background: transparent;
-    outline: none;
-    height: 40px;
-    color: #ffffff;
-    font-size: 16px;
+.mid{
+	text-align: center;
 }
 
-.loginbox input[type="submit"]{
-    background: none;
-    outline: none;
-    height: 40px;
-    background: #fb2525;
-    color: #ffffff;
-    font-size: 18px;
-    border-radius: 20px;
+.nobg{
+	background: none;
+	margin: 0px;
 }
 
-.loginbox input[type="submit"]:hover{
-    cursor: pointer;
-    background: #ffc107;
-    color: #000000;
+.grid-center{
+	grid-column-start: 2;
+	grid-column-end: 3;
 }
 
-.loginbox a{
-    text-decoration: none;
-    font-size: 12px;
-    line-height: 20px;
-    color: darkgrey;
+.nomrg{
+	grid-template-rows: 50px;
 }
 
-.loginbox a:hover{
-    color: #ffc107;
+button{
+	background: #7C4A47;
+	margin: 10px;
+	border-radius: 45px;
+	width: 1008px;
+	height: 90px;
+}
+
+input{
+	background: none;
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 18px;
+	line-height: 22px;
+	margin-top: -10px;
+	margin-left: 10px;
+	margin-right: 10px;
+	border: none;
+	color: #FFFFFF;
 }

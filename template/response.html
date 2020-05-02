@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Document Verification</title>
-	<link rel="stylesheet" href="{{url_for('static',filename='response.css')}}" type="text/css">
+	<link rel="stylesheet" href="{{url_for('static',filename='style.css')}}" type="text/css">
 </head>
 
 <body>
@@ -109,7 +109,7 @@
 		{% endif %}
 
 		{% if OCR %}
-		<div class="grid-item ocr">
+		<div class="grid-item wide">
 			<h3>OCR Text</h3>
 			<p>{{OCR}}</p>
 		</div>
