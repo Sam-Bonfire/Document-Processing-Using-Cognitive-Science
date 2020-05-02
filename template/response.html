@@ -17,95 +17,13 @@
 	{% endif %}
 
 	<div class="grid-container">
-		{% if UID %}
-		<div class="grid-item">
-			<h3>UID</h3>
-			<p>{{UID}}</p>
-		</div>
-		{% endif %}
-
-		{% if Name %}
-		<div class="grid-item">
-			<h3>Name</h3>
-			<p>{{Name}}</p>
-		</div>
-		{% endif %}
-
-		{% if Gender %}
-		<div class="grid-item">
-			<h3>Gender</h3>
-			<p>{{Gender}}</p>
-		</div>
-		{% endif %}
-
-		{% if Date_of_Birth %}
-		<div class="grid-item">
-			<h3>Date of Birth</h3>
-			<p>{{Date_of_Birth}}</p>
-		</div>
-		{% endif %}
-
-		{% if CO %}
-		<div class="grid-item">
-			<h3>CO</h3>
-			<p>{{CO}}</p>
-		</div>
-		{% endif %}
-
-		{% if Loc %}
-		<div class="grid-item">
-			<h3>Locality</h3>
-			<p>{{Loc}}</p>
-		</div>
-		{% endif %}
-
-		{% if VTC %}
-		<div class="grid-item">
-			<h3>VTC</h3>
-			<p>{{VTC}}</p>
-		</div>
-		{% endif %}
-
-		{% if Po %}
-		<div class="grid-item">
-			<h3>Post Office</h3>
-			<p>{{Po}}</p>
-		</div>
-		{% endif %}
-
-		{% if District %}
-		<div class="grid-item">
-			<h3>District</h3>
-			<p>{{District}}</p>
-		</div>
-		{% endif %}
-
-		{% if SubDistrict %}
-		<div class="grid-item">
-			<h3>Sub District</h3>
-			<p>{{SubDistrict}}</p>
-		</div>
-		{% endif %}
-
-		{% if State %}
-		<div class="grid-item">
-			<h3>State</h3>
-			<p>{{State}}</p>
-		</div>
-		{% endif %}
-
-		{% if Pincode %}
-		<div class="grid-item">
-			<h3>Pincode</h3>
-			<p>{{Pincode}}</p>
-		</div>
-		{% endif %}
-
-		{% if Year_of_Birth %}
-		<div class="grid-item">
-			<h3>Year of Birth</h3>
-			<p>{{Year_of_Birth}}</p>
-		</div>
+		{% if qrData %}
+			{% for key, value in qrData.items() %}
+				<div class="grid-item">
+					<h3>{{key.capitalize()}}</h3>
+					<p>{{value}}</p>
+				</div>
+			{% endfor %}
 		{% endif %}
 
 		{% if OCR %}

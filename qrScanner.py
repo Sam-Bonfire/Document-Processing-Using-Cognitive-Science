@@ -13,8 +13,8 @@ def scanQR(file_name):
 
     #Using only the xml data in the QR Code of Aadhar Card for parsing to a dict
     xmlData = str(barcodeData)[42:-1]
-    return xmltodict.parse(xmlData)
+    return xmltodict.parse(xmlData,attr_prefix='')
 
 
 if __name__ == '__main__':
-    print(scanQR('upload.png'))
+    print(scanQR('prathamesh.jpg'))
